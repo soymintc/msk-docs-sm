@@ -55,6 +55,13 @@ vac      -   Highlight all text including the pair marked with c (like va<, va' 
 vic      -   Highlight all text inside the pair marked with c
 ```
 
+### MACRO
+```
+qa        -   Start recording a macro at @a, stop with another q
+@a        -   Execute macro saved at @a
+let @a = 'i'  In .vimrc file, this saves action i (insert mode) as macro @a
+```
+
 ### MARKING
 ```
 ma        -   Set a marker a at cursor position to come back to later. a can be any character you choose
@@ -151,6 +158,7 @@ CTRL+p          -   Press after typing part of a word. It scrolls up the list of
 :r <file_path>      -   reads a file from the path to the buffer
 :r !<command>       -   reads the output of the command into buffer
 :.! cat <file_path> -   reads the output of the command (eg: cat) into buffer or !! in ex-mode
+:! <bash_command>   -   executes bash command and shows below as a temporary window
 ```
 
 ### TAB VIEWS
@@ -176,10 +184,10 @@ gT                  -   go to previous tab
 
 ### TAB SHORTCUTS
 ```
-CTRL+W T            -   Break out current window into a new tabview
-CTRL+W o            -   Close every window in the current tabview but the current one
-CTRL+W n            -   create a new window in the current tabview
-CTRL+W c            -   Close current window in the current tabview
+CTRL+w T            -   Break out current window into a new tabview
+CTRL+w o            -   Close every window in the current tabview but the current one
+CTRL+w n            -   create a new window in the current tabview
+CTRL+w c            -   Close current window in the current tabview
 ```
 
 ### WINDOW MANAGEMENT
@@ -223,25 +231,12 @@ CTRL+w o       -   Maxmize current window (note: this overwrites your current wi
 
 ### MOVING WINDOWS
 ```
-CTRL+W r       -   Swap bottom/top if split horizontally
-CTRL+W R       -   Swap top/bottom if split horizontally
-
-CTRL+w r       -   Rotates the windows from left to right - only if the windows are split vertically
-CTRL+w R       -   Rotates the windows from right to left - only if the windows are split vertically
+CTRL+w r       -   Swaps open windows 
 
 CTRL+w H       -   Move current window the far left and use the full height of the screen
 CTRL+w J       -   Move current window the far bottom and use the full width of the screen
 CTRL+w K       -   Move current window the far top and full width of the screen
 CTRL+w L       -   Move current window the far right and full height of the screen
-```
-
-### NAVIGATE BETWEEN WINDOWS
-```
-CTRL+w CTRL+w  -   switch between windows
-CTRL+w UP      -   Move to the top window from current window
-CTRL+w DOWN    -   Move to the bottom window from current window
-CTRL+w LEFT    -   Move to the left window from current window
-CTRL+w RIGHT   -   Move to the right window from current window
 ```
 
 ### RESIZING WINDOWS
@@ -287,6 +282,7 @@ CTRL-w + <-|->      -  (left or right) to navigate
 :w !sudo sh -c "cat > %"  -             "                            "
 
 ```
+
 More details:
 https://www.cs.oberlin.edu/~kuperman/help/vim/markers.html
 
